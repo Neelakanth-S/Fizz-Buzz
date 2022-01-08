@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIZZ BUZZ</title>
+    <style>
+        body{
+            background-color: rgb(133, 245, 143);
+        }
+        .main{
+            text-align: center;
+        }
+       
+        .container{
+            height: 200px;
+            width: 200px;
+            background: lightblue;
+            margin: auto;
+            box-shadow: 0 0 10px black;
+            border-radius: 10px;
+
+            
+            
+            
+        }
+        #btn{
+            background-color: rgb(13, 226, 120);
+            border-radius: 10px;
+            padding: 7px;margin-top: 5px;
+
+        }
+        input{
+            border-radius: 10px;
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>FIZZ BUZZ APP</h2>
+    <div class="container">
+      <br><br><br><br><br> <input type="number" value="" id="t1" placeholder="Enter number"/>
+    </div><br>
+    <button onclick="fizzbuzz()"id="btn">FIND FIZZ BUZZ</button>
+    
+    <p id="result"> </p>
+    </div>
+    <script>
+        function fizzbuzz(){
+           let n= document.getElementById("t1").value;
+            if(n=="")
+            alert("enter n number to generate Fizz Buzz series");
+            else
+            for(i=1;i<=n;i++){
+   var li_ref=document.createElement("LI");
+   li_ref.innerText=i;
+   if(i%3==0 && i%5==0)
+   li_ref.innerText="FIZZBUZZ";
+   else if(i%3==0)
+   li_ref.innerText="FIZZ";
+   else if(i%5==0)
+   li_ref.innerText="BUZZ";
+   else
+   li_ref.innerText=i;
+   let result_ref=document.getElementById("result");
+   result_ref.appendChild(li_ref);
+            }
+        }
+        
+    </script>
+</body>
+</html>
